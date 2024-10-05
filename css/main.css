@@ -1,5 +1,5 @@
 @font-face {
-  font-family: Custom;
+  font-family: Custom, monospace;
   src: url(../font/Montserrat-Regular.ttf);
 }
 
@@ -121,7 +121,6 @@ body {
   -webkit-filter: contrast(120%);
   filter: contrast(120%);
   background-image: url('../image/bg.png');
-  background-repeat: no-repeat;
   background-size:  cover;
   background-position: center center;
   -o-background-size: cover;
@@ -201,3 +200,15 @@ img {
   mask-border: var(--_m);
   clip-path: polygon(-41% 0, 50% 91%, 141% 0);
 }
+
+/*@supports ( -webkit-touch-callout : none) {
+  body {
+    background-attachment:scroll
+  }
+}
+
+@supports not ( -webkit-touch-callout : none) {
+  body {
+    background-attachment: fixed;
+  }
+}*/
