@@ -31,7 +31,7 @@ a.white-mode:hover, a.white-mode:link:hover, a.white-mode:visited:hover, a.white
   left: 50%;
   top: 42%;
   transform: translateX(-50%) translateY(-50%);
-  font-family: Custom;
+  font-family: Custom, monospace;
   text-align: center;
   width: 100%;
 }
@@ -124,7 +124,6 @@ body {
   background-repeat: no-repeat;
   background-size:  cover;
   background-position: center center;
-  background-attachment: fixed;
   -o-background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
