@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Custom;
+  src: url(../font/Montserrat-Regular.ttf);
+}
+
 .more-pens {
   position: fixed;
   left: 20px;
@@ -26,7 +31,7 @@ a.white-mode:hover, a.white-mode:link:hover, a.white-mode:visited:hover, a.white
   left: 50%;
   top: 42%;
   transform: translateX(-50%) translateY(-50%);
-  font-family: "Montserrat";
+  font-family: Custom;
   text-align: center;
   width: 100%;
 }
@@ -115,11 +120,15 @@ body {
   align-items: center;
   -webkit-filter: contrast(120%);
   filter: contrast(120%);
-  background-image: url('../bg.jpg');
+  background-image: url('../image/bg.png');
   background-repeat: no-repeat;
   background-size:  cover;
+  background-position: center center;
+  background-attachment: fixed;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
 
-background-position: center center;
   /*background-image: radial-gradient(1600px at 70% 120%, rgba(33, 39, 80, 1) 10%, #020409 100%) !important;        /* background-color: black; */*/
 }
 
