@@ -142,20 +142,22 @@ setInterval(
 );
 
 function clear() {
-  let grd = canvas.createRadialGradient(
-    tela.width / 2,
-    tela.height / 2,
-    0,
-    tela.width / 2,
-    tela.height / 2,
-    tela.width
-  );
-  grd.addColorStop(0, "rgba(20,20,20,1)");
-  grd.addColorStop(1, "rgba(0,0,0,0)");
-  // Fill with gradient
-  canvas.globalAlpha = 0.16;
-  canvas.fillStyle = grd;
-  canvas.fillRect(0, 0, tela.width, tela.height);
+  // let grd = canvas.createRadialGradient(
+  //   tela.width / 2,
+  //   tela.height / 2,
+  //   0,
+  //   tela.width / 2,
+  //   tela.height / 2,
+  //   tela.width
+  // );
+  // grd.addColorStop(0, "rgba(20,20,20,1)");
+  // grd.addColorStop(1, "rgba(0,0,0,0)");
+  // // Fill with gradient
+  // canvas.globalAlpha = 0.16;
+  // canvas.fillStyle = grd;
+  // canvas.fillRect(0, 0, tela.width, tela.height);
+
+  canvas.clearRect(0, 0, tela.width, tela.height);
 }
 
 function blur(ctx, canvas, amt) {

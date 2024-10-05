@@ -97,7 +97,7 @@ canvas {
 
 .STARDUST2 {
   position: relative !important;
-  top: 230px;
+  top: 180px;
 }
 
 .STARDUST3 {
@@ -118,16 +118,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-filter: contrast(120%);
-  filter: contrast(120%);
-  background-image: url('../image/bg.png');
-  background-size:  cover;
-  background-position: center center;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
+ 
 
-  /*background-image: radial-gradient(1600px at 70% 120%, rgba(33, 39, 80, 1) 10%, #020409 100%) !important;        /* background-color: black; */*/
+  background-image: radial-gradient(1600px at 70% 120%, rgba(33, 39, 80, 1) 10%, #020409 100%) !important;        /* background-color: black; */
 }
 
 .container2 {
@@ -136,7 +129,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   /*background-image: radial-gradient(1600px at 70% 120%, rgba(33, 39, 80, 1) 10%, #020409 100%) !important;*/
 }
 
@@ -190,7 +183,7 @@ a:hover {
 }
 
 /* heart image: https://stackoverflow.com/a/51216413 */
-img {
+.title img {
 
   /* width: 200px; */
   aspect-ratio: 1;
@@ -201,14 +194,8 @@ img {
   clip-path: polygon(-41% 0, 50% 91%, 141% 0);
 }
 
-/*@supports ( -webkit-touch-callout : none) {
-  body {
-    background-attachment:scroll
-  }
+.bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-
-@supports not ( -webkit-touch-callout : none) {
-  body {
-    background-attachment: fixed;
-  }
-}*/
