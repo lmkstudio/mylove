@@ -216,6 +216,7 @@ a:hover {
   right: 60px;
   z-index: 1000;
   text-shadow: 0 0 10px #ff006c, 0 0 20px #ff006c, 0 0 30px #ff006c, 0 0 40px #ff417d, 0 0 70px #ff417d, 0 0 80px #ff417d, 0 0 100px #ff417d, 0 0 150px #ff417d;
+  animation: shake 0.5s infinite;
 }
 
 .music {
@@ -274,3 +275,11 @@ a:hover {
 /* Delay the animations for each note */
 .notes span:nth-child(1) { animation-delay: 0s; }
 .notes span:nth-child(2) { animation-delay: 1s; }
+
+@keyframes shake {
+    0% { transform: translate(0); }
+    25% { transform: translate(-5px); }
+    50% { transform: translate(5px); }
+    75% { transform: translate(-5px); }
+    100% { transform: translate(0); }
+}
