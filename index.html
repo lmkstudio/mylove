@@ -2,35 +2,58 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
-    <!-- <audio autoplay="autopaly">
+    <audio id="audio" autoplay loop>
       <source src="music/music.mp3" type="audio/mp3" />
-    </audio> -->
-    <!-- 星空html -->
-    <!-- <div> -->
+    </audio>
+  
     <img class="bg" src="image/bg.png"/>  
     <div class="container2">
       <div class="content">
         <canvas id="universe"></canvas>
       </div>
     </div>
-    <!-- </div> -->
+
     <div class="title">
-      <!-- EDIT HERE -->
       <h1 class="STARDUST2">K ❤ U</h1>
-      <img class="img" src="image/photo.png" alt="JUNO_OKYO" />
+      <img class="img" src="image/photo.png"/>
       <canvas id="pinkboard"></canvas>
+    </div>
+
+    <span id="note" class="note" onclick="toggleAudio()">♫</span>
+    
+    <div id="music" class="music hide" onclick="toggleAudio()">
+      <img class="disc" src="image/disc.png"/>
+      <div class="notes">
+        <span>♪</span>
+        <span>♫</span>
+      </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/particle.js"></script>
     <script src="js/universe.js"></script>
+
+    <script type="text/javascript">
+      function toggleAudio() {
+        const audio = document.getElementById('audio');
+        const note = document.getElementById('note');
+        const music = document.getElementById('music');
+        if (audio.paused) {
+          music.classList.remove('hide');
+          note.classList.add('hide');
+          audio.play();
+        } else {
+          note.classList.remove('hide');
+          music.classList.add('hide');
+          audio.pause();
+        }
+      }
+    </script>
   </body>
 </html>

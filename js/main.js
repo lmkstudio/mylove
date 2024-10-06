@@ -19,7 +19,7 @@ class Particle1 {
     this.random2 = Math.random();
     this.progress = 0;
     this.canvas = canvas;
-    this.life = 1000 + Math.random() * 3000;
+    this.life = 2000 + Math.random() * 3000;
 
     this.x =
       $(window).width() / 2 + (Math.random() * 20 - Math.random() * 20);
@@ -40,7 +40,7 @@ class Particle1 {
           })
         );
       }.bind(this),
-      this.random * 20
+      this.random * 40
     );
 
     setTimeout(

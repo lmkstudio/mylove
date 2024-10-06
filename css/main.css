@@ -199,3 +199,78 @@ a:hover {
   height: 100%;
   object-fit: cover;
 }
+
+.speaker {
+  color: white;
+  position: fixed;
+  bottom: 100px;
+  right: 60px;
+  z-index: 1000;
+}
+
+.note {
+  color: white;
+  font-size: 80px;
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  z-index: 1000;
+  text-shadow: 0 0 10px #ff006c, 0 0 20px #ff006c, 0 0 30px #ff006c, 0 0 40px #ff417d, 0 0 70px #ff417d, 0 0 80px #ff417d, 0 0 100px #ff417d, 0 0 150px #ff417d;
+}
+
+.music {
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  z-index: 1000;
+}
+
+.disc {
+  width: 100px;
+  height: 100px;
+  animation: rotate 15s linear infinite;
+}
+
+.notes {
+    position: absolute;
+    bottom: 50px; /* Position notes above the icon */
+    left: 50%;
+    transform: translateX(-50%); /* Center the notes */
+    white-space: nowrap; /* Prevent notes from wrapping */
+}
+
+.notes span {
+  color: white;
+  display: inline-block;
+  font-size: 40px; /* Adjust size as needed */
+  opacity: 0; /* Start as invisible */
+  animation: fly 3s forwards infinite linear; /* Animation for notes */
+}
+
+.hide {
+  visibility: hidden;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg); /* Start from 0 degrees */
+    }
+    to {
+        transform: rotate(360deg); /* End at 360 degrees */
+    }
+}
+
+@keyframes fly {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 1; /* Fully visible */
+    }
+    100% {
+        transform: translateY(-200px) translateX(0); /* Fly up */
+        opacity: 0; /* Fade out */
+    }
+}
+
+/* Delay the animations for each note */
+.notes span:nth-child(1) { animation-delay: 0s; }
+.notes span:nth-child(2) { animation-delay: 1s; }
